@@ -32,11 +32,12 @@ This is done by introducing 4 new format strings that can be added to
 - `#{battery_percentage}` - will show battery percentage
 - `#{battery_remain}` - will show remaining time of battery charge
 - `#{battery_status_bg}` - will set the background color of the status bar based on battery percentage
+- `#{battery_status_fg}` - will set the foreground color of the status bar based on battery percentage
 
 ### Usage
 
-Add `#{battery_icon}`, `#{battery_percentage}` `#{battery_remain}`, or
-`#{battery_status_bg}` format strings to existing `status-right` tmux option.
+Add `#{battery_icon}`, `#{battery_percentage}` `#{battery_remain}`,
+`#{battery_status_bg}`, or `#{battery_status_fg} format strings to existing `status-right` tmux option.
 Example:
 
     # in .tmux.conf

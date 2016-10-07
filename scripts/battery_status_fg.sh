@@ -4,10 +4,10 @@ CURRENT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
 source "$CURRENT_DIR/helpers.sh"
 
-color_full_charge_default="#[bg=green,fg=colour236,bold]"
-color_high_charge_default="#[bg=yellow,fg=colour236,bold]"
-color_medium_charge_default="#[bg=colour208,fg=colour236,bold]" # orange
-color_low_charge_default="#[bg=red,fg=colour236,bold]"
+color_full_charge_default="#[fg=green,bold]"
+color_high_charge_default="#[fg=yellow,bold]"
+color_medium_charge_default="#[fg=colour208,bold]" # orange
+color_low_charge_default="#[fg=red,bold]"
 
 color_full_charge=""
 color_high_charge=""
@@ -21,7 +21,7 @@ get_charge_color_settings() {
     color_low_charge=$(get_tmux_option "@batt_color_low_charge" "$color_low_charge_default")
 }
 
-print_battery_status_bg() {
+print_battery_status_fg() {
     # Call `battery_percentage.sh`.
     percentage=$($CURRENT_DIR/battery_percentage.sh | sed -e 's/%//')
     if [ $percentage -eq 100 ]; then
@@ -37,6 +37,6 @@ print_battery_status_bg() {
 
 main() {
     get_charge_color_settings
-	print_battery_status_bg
+	print_battery_status_fg
 }
 main
