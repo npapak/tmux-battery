@@ -47,7 +47,7 @@ Example:
 
 Add plugin to the list of TPM plugins in `.tmux.conf`:
 
-    set -g @plugin 'tmux-plugins/tmux-battery'
+    set -g @plugin 'npapak/tmux-battery'
 
 Hit `prefix + I` to fetch the plugin and source it.
 
@@ -57,7 +57,7 @@ If format strings are added to `status-right`, they should now be visible.
 
 Clone the repo:
 
-    $ git clone https://github.com/tmux-plugins/tmux-battery ~/clone/path
+    $ git clone https://github.com/npapak/tmux-battery.git ~/clone/path
 
 Add this line to the bottom of `.tmux.conf`:
 
