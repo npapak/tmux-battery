@@ -10,11 +10,11 @@ charging_icon=""
 attached_icon=""
 discharging_icon=""
 
-charged_default="❇ "
+charged_default="✔ "
 charged_default_osx="🔋 "
 charging_default="⚡️ "
 attached_default="⚠️ "
-discharging_default="🔋 "
+discharging_default=" "
 
 charged_default() {
 	if is_osx; then
